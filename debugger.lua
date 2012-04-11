@@ -72,8 +72,8 @@ err = pcall(function()
 end)
 if not rl then
     readline = function(prompt)
-        write(prompt)
-        return read()
+        io.write(prompt)
+        return io.read("*line")
     end
     saveline = function(s) end
 end
